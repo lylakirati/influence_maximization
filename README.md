@@ -8,7 +8,7 @@ nocite: '@*'
 ## Introduction
 
 Understanding how information disseminate in today's world has never been more important: individuals, companies, organizations, and governments face limited resources and increasing competition for audience attention in spreading their messages and encouraging actions.
-The influence maximization problem has a range of applications, spanning product marketing strategy, humanitarian crowdfunding, participatory data collection, and spreading awareness about health resources. Decision-makers must not only consider how their messages will be diffused within their direct sphere of influence—existing customers, social media followers, current patients—but also how it will spread beyond what is known—friends of customers, followers of followers, coworkers of patients.
+The influence maximization problem has a range of applications, spanning product marketing strategy, humanitarian crowdfunding, participatory data collection, and spreading awareness about health resources. Decision-makers must not only consider how their messages will be diffused within their direct sphere of influence — existing customers, social media followers, current patients — but also how it will spread beyond what is known—friends of customers, followers of followers, coworkers of patients.
 
 The goal of information dissemination is to effectively spread a message as widely as possible within a given network. The influence maximization problem is to select the most influential members within a social network such that the outcome of the spreading process is optimized.
 Formally, given a directed network $G = (V, E, w)$ where $V$ is a set of nodes, $E \subseteq V \times V$ is a set of directed edges, and $w: E \rightarrow [0, 1]$ represents a weight function in which $w(i, j)$ is the likelihood of $j$ being influenced by $i$. Let an initial seed set $S \subset V$ of fixed size $M$ become activated. Then, each activated node $i \in S$ activates its neighboring node $j$ with probability $w(i, j)$. The goal is to find the initial seed set $S$ such that the total number of activated nodes is maximized.
@@ -23,7 +23,7 @@ This work is inspired by Stein et al. (2017) which investigates different heuris
 4. **State-of-the-Art IMM algorithms with Limited Visibility**: classic IM algorithms such as TIM (Tang et al., 2014) and IMM (Tang et al., 2015) developed for fully observed networks.
 
 Stein et al. shows that the weighted degree-based
-method outperforms the state-of-the-art algorithms on the NetHept dataset -- a collaboration network within the high energy physics theory community between 1991 and 2003 -- particularly when network visibility is low. 
+method outperforms the state-of-the-art algorithms on the NetHept dataset — a collaboration network within the high energy physics theory community between 1991 and 2003 — particularly when network visibility is low. 
 
 
 ## Examples
