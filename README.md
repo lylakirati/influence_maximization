@@ -18,7 +18,7 @@ This work is inspired by Stein et al. (2017) which investigates different heuris
 4. **State-of-the-Art IMM algorithms with Limited Visibility**: classic IM algorithms such as TIM (Tang et al., 2014) and IMM (Tang et al., 2015) developed for fully observed networks.
 
 Stein et al. shows that the weighted degree-based
-method outperforms the state-of-the-art algorithms on the NetHept dataset — a collaboration network within the high energy physics theory community between 1991 and 2003 — particularly when network visibility is low. The paper also notes that the NetHept network has high-degree assortativity, meaning that high-degree nodes are more likely to be connected to other high-degree nodes and vice versa. Thus,seeding a high-degree node (using degree-based heuristic) can lead to good performance as it spreads influence to its high-degree neighbors which might subsequently influence the unseen part of the network.
+method outperforms the state-of-the-art algorithms on the NetHept dataset — a collaboration network within the high energy physics theory community between 1991 and 2003 — particularly when network visibility is low. The paper also notes that the NetHept network has high-degree assortativity, meaning that high-degree nodes are more likely to be connected to other high-degree nodes and vice versa. Thus, seeding a high-degree node (using degree-based heuristic) can lead to good performance as it spreads influence to its high-degree neighbors which might subsequently influence the unseen part of the network.
 
 This work focuses on the influence maximization problem on observable parts of networks with varying degree assortativities. To create new networks with different degree assortativities, 
 we alter connections in a fully observable network by removing an edge $(u, v_1)$ and 
@@ -73,7 +73,7 @@ Tang, Y., Xiao, X., & Shi, Y. (2014). *Influence maximization: Near-optimal time
 
 ```bibtex
 @misc{kirati-influence-max,
-  author = {Lyla Kiratiwudhikul, Caleb Saul, Derek Chang, Ben Elliott},
+  author = {Lyla Kiratiwudhikul and Caleb Saul and Derek Chang and Ben Elliott},
   title = {Influence Maximization for Partially Observable Networks with Varying Degree Assortativities},
   year = {2023},
   publisher = {GitHub},
