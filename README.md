@@ -18,8 +18,12 @@ This work is inspired by Stein et al. (2017) which investigates different heuris
 4. **State-of-the-Art IMM algorithms with Limited Visibility**: classic IM algorithms such as TIM (Tang et al., 2014) and IMM (Tang et al., 2015) developed for fully observed networks.
 
 Stein et al. shows that the weighted degree-based
-method outperforms the state-of-the-art algorithms on the NetHept dataset — a collaboration network within the high energy physics theory community between 1991 and 2003 — particularly when network visibility is low. 
+method outperforms the state-of-the-art algorithms on the NetHept dataset — a collaboration network within the high energy physics theory community between 1991 and 2003 — particularly when network visibility is low. The paper also notes that the NetHept network has high-degree assortativity, meaning that high-degree nodes are more likely to be connected to other high-degree nodes and vice versa. Thus,seeding a high-degree node (using degree-based heuristic) can lead to good performance as it spreads influence to its high-degree neighbors which might subsequently influence the unseen part of the network.
 
+This work focuses on the influence maximization problem on observable parts of networks with varying degree assortativities. To create new networks with different degree assortativities, 
+we alter connections in a fully observable network by removing an edge $(u, v_1)$ and 
+adding a new edge $(u, v_2)$ where $v_2$ is a random node different from $v_1$. In this way, we
+preserve the numbers of nodes and edges in the original graph. Then, for each newly generated network, we follow the experiment setup as in Stein et al. (2017): construct an observable part of the graph, run seeding algorithms, and simulate information dissemination using weighted independent cascade model. The results show that using weighted degree-based seeding method, low degree assortativity leads to higher average spread across networks with various visibilities. However, the performance of a low degree-assortative network is more sensitive to which part of the network is observable than in graphs with higher assortativities. See `assortativity_influence_nethept.ipynb` for code and results.
 
 ## Examples
 
@@ -36,7 +40,6 @@ After creating an `networkx.classes.digraph.DiGraph` object called `graph`, you 
 from models.observableSubgraph import create_subgraph, simulate_observable_nodes
 from models.seeding import Seeding
 from models.independentCascade import IndependentCascade
-
 
 fully_observ_O, boundary_nodes = simulate_observable_nodes(graph, target_visibility = 0.1)
 observable_nodes = fully_observ_O + boundary_nodes
