@@ -61,6 +61,7 @@ print(f"Average spread across 10 runs: {avg_spread}")
 
 Check out an example in `example.ipynb`!
 
+
 ## References
 
 Stein, S., Eshghi, S., Maghsudi, S., Tassiulas, L., Bellamy, R. K. E., & Jennings, N. R. (2017). Heuristic algorithms for influence maximization in partially observable social networks. In *SocInf@IJCAI*.
@@ -72,6 +73,7 @@ Tang, Y., Xiao, X., & Shi, Y. (2014). *Influence maximization: Near-optimal time
 
 ## Citation
 
+```bibtex
 @misc{kirati-influence-max,
   author = {Lyla Kiratiwudhikul, Caleb Saul, Derek Chang, Ben Elliott},
   title = {Influence Maximization for Partially Observable Networks with Varying Degree Assortativities},
@@ -80,3 +82,4 @@ Tang, Y., Xiao, X., & Shi, Y. (2014). *Influence maximization: Near-optimal time
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/lylakirati/influence_maximization}}
 }
+```
