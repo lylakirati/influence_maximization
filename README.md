@@ -1,14 +1,9 @@
----
-bibliography: mybib.bib
-nocite: '@*'
-...
-
 # Influence Maximization for Partially Observable Networks with Varying Degree Assortativities
 
 ## Introduction
 
 Understanding how information disseminate in today's world has never been more important: individuals, companies, organizations, and governments face limited resources and increasing competition for audience attention in spreading their messages and encouraging actions.
-The influence maximization problem has a range of applications, spanning product marketing strategy, humanitarian crowdfunding, participatory data collection, and spreading awareness about health resources. Decision-makers must not only consider how their messages will be diffused within their direct sphere of influence — existing customers, social media followers, current patients — but also how it will spread beyond what is known—friends of customers, followers of followers, coworkers of patients.
+The influence maximization problem has a range of applications, spanning product marketing strategy, humanitarian crowdfunding, participatory data collection, and spreading awareness about health resources. Decision-makers must not only consider how their messages will be diffused within their direct sphere of influence — existing customers, social media followers, and current patients — but also how it will spread beyond what is known: friends of customers, followers of followers, and coworkers of patients.
 
 The goal of information dissemination is to effectively spread a message as widely as possible within a given network. The influence maximization problem is to select the most influential members within a social network such that the outcome of the spreading process is optimized.
 Formally, given a directed network $G = (V, E, w)$ where $V$ is a set of nodes, $E \subseteq V \times V$ is a set of directed edges, and $w: E \rightarrow [0, 1]$ represents a weight function in which $w(i, j)$ is the likelihood of $j$ being influenced by $i$. Let an initial seed set $S \subset V$ of fixed size $M$ become activated. Then, each activated node $i \in S$ activates its neighboring node $j$ with probability $w(i, j)$. The goal is to find the initial seed set $S$ such that the total number of activated nodes is maximized.
